@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포툰쿠키</title>
+</head>
+<body>
+    <script>
+        // userAgent로 기기 정보 확인
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        // iOS인지 확인
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            // iOS 기기일 때 리다이렉트할 URL
+            window.location.href = "https://apps.apple.com/kr/app/%ED%8F%AC%ED%88%B0%EC%BF%A0%ED%82%A4/id6605937321";
+        }
+        // Android인지 확인
+        else if (/android/i.test(userAgent)) {
+            // Android 기기일 때 리다이렉트할 URL
+            window.location.href = "https://play.google.com/store/apps/details?id=com.startingblue.fourtooncookie";
+        } else {
+            // 다른 기기일 때 리다이렉트할 URL
+            window.location.href = "https://apps.apple.com/kr/app/%ED%8F%AC%ED%88%B0%EC%BF%A0%ED%82%A4/id6605937321";
+        }
+    </script>
+</body>
+</html>
